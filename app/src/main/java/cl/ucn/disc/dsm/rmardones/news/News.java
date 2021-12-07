@@ -90,7 +90,7 @@ public final class News {
     public News(final String title,
                 final String source,
                 final String author,
-                String url,
+                final String url,
                 final String urlImage,
                 final String description,
                 final String content,
@@ -103,7 +103,7 @@ public final class News {
         this.title = title;
 
         //Source
-        if (source == null || source.length() < 2){
+        if (source == null || source.length() < 2 ){
             throw new IllegalArgumentException("Source required");
         }
         this.source = source;
@@ -115,7 +115,7 @@ public final class News {
         this.author = author;
 
         //ID: Hashing(title + | source + | + author)
-        this.id = LongHashFunction.xx().hashChars(title + "|" source + "|" + author);
+        this.id = LongHashFunction.xx().hashChars(title + "|" + source + "|" + author);
 
         this.url = url;
         this.urlImage = urlImage;
@@ -139,7 +139,6 @@ public final class News {
         this.publishedAt = publishedAt;
     }
 }
-
 
 
 

@@ -28,5 +28,5 @@ import java.util.List;
  * @author Rachell Mardones-Luna.
  */
 public interface Contracts {
-    List<News> retrieveNews();
+    List <News> retrieveNews();
 }

@@ -6,24 +6,27 @@ Android Project to show a list of News.
 
 ```puml
 @startuml
-package org.threeten.bp{
-        class ZoneDateTime{
+package externals^ #ffcccc{
+    package org.threeten.bp{
+            class ZoneDateTime{
+                ...
+            }
+            class ZoneId{
+            ...
+            }
+    }
+    package net.openhft.hashing{
+        class LongHashFunction{
             ...
         }
-        class ZoneId{
-        ...
+    }
+    package com.github.javafaker{
+        class Faker{
+            ...
         }
-}
-package net.openhft.hashing{
-    class LongHashFunction{
-        ...
     }
 }
-package com.github.javafaker{
-    class Faker{
-        ...
-    }
-}
+
 package cl.ucn.disc.dsm.news{
 
     package model #ccffcc{
